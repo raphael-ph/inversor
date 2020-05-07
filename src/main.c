@@ -6,7 +6,8 @@
 #include <stdio.h>
 const int tam_buffer = 100;
 
-int main() {
+int main()
+{
     char buffer[tam_buffer];
 	char aux_buffer[tam_buffer];
 	int i, j, x;
@@ -30,13 +31,17 @@ int main() {
 	if(buffer[i] == '\n')
 		{
 			x = i;
-			for(i = x-1, x; j <= x; i--, j++)
+			for(i = x-1, x; j < x; i--, j++)
 			{
 				aux_buffer[j] = buffer[i];
 			}
 		}
 	aux_buffer[x] = '\n';
-    printf("%s", aux_buffer);
+	for(i = 0; aux_buffer[i] != '\n'; i++)
+	{
+		buffer[i] = aux_buffer[i];
+	}
+    printf("%s", buffer);
     return 0;
 }
 
