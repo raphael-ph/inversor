@@ -1,4 +1,4 @@
-/* Data de submissao:
+/* Data de submissao: 07.05.2020
  * Nome: RAPHAEL CARVALHO DA SILVA E SILVA
  * RA: 205125
  */
@@ -22,7 +22,7 @@ int main()
 			{
 				aux_buffer[j] = buffer[i];
 			}
-			aux_buffer[x] = buffer[x];
+			aux_buffer[x] = buffer[x]; //acrescentar o espaco na nova string invertida
 			i = x;
 			j = x + 1;
 		}
@@ -37,13 +37,10 @@ int main()
 			}
 		}
 	aux_buffer[x] = '\n';
-	for(i = 0; aux_buffer[i] != '\n'; i++)
+	for(i = 0; aux_buffer[i] != '\n'; i++) // colocar a string invertida na variavel original
 	{
 		buffer[i] = aux_buffer[i];
 	}
     printf("%s", buffer);
     return 0;
 }
-
-
-
